@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DBZ Fan Portal</title>
+  
+  <style>   .photo{
+      height:50px;
+      width: 50px;
+      background-image: url("download (7).jpg");
+      background-size: cover;
+    }
+    .comment{
+      font-size: 50px;
+      align-self: flex-start;
+    }
+    .dragon{
+      display : flex;
+      justify-content: space-evenly;
+      border:2px solid black;
+      height: 150px;
+      background-color: burlywood;
+      align-items: center;
+    }
+    #like{
+      align-self:flex-end;
+    }
+    .ball1{
+height: 100px;
+width: 100px;
+border:2px solid #f85b1a;
+border-radius: 50%;
+margin-left: 20px;
+text-align: center;
+position: absolute;
+animation-name: myani1;
+animation-duration: 8s;
+top:550px;
+right:1300px;
+animation-delay:0.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+background-image: url("download (2).jpg");
+background-size: cover;
+    }
+        .ball2{
+height: 100px;
+width: 100px;
+border:2px solid #f85b1a;
+border-radius: 50%;
+margin-left: 20px;
+text-align: center;
+position: absolute;
+animation-name: myani2;
+animation-duration: 8s;
+top:550px;
+right:1100px;
+animation-delay:1s;
+animation-iteration-count: infinite;
+animation-direction: alternate;background-image: url("download (3).jpg");
+background-size: cover;
+    }
+    .ball3{
+height: 100px;
+width: 100px;
+border:2px solid #f85b1a;
+border-radius: 50%;
+margin-left: 20px;
+text-align: center;
+position: absolute;
+top:550px;
+right:900px;
+animation-name: myani3;
+animation-duration: 8s;
+animation-delay:1.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+background-image: url("download (5).jpg");
+background-size: cover;
+    }
+    .ball4{
+height: 100px;
+width: 100px;
+border:2px solid #f85b1a;
+border-radius: 50%;
+margin-left: 20px;
+text-align: center;
+position: absolute;
+top:550px;
+right:700px;
+animation-name: myani4;
+animation-duration: 8s;
+animation-delay:2s;
+animation-iteration-count: infinite;
+animation-direction: alternate;background-image: url("4star.jpg");
+background-size: cover;
+    }
+    .ball5{
+height: 100px;
+width: 100px;
+border:2px solid #f85b1a;
+border-radius: 50%;
+margin-left: 20px;
+text-align: center;
+position: absolute;
+top:550px;
+right:500px;
+animation-name: myani5;
+animation-duration: 8s;
+animation-delay:2.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+background-image: url("5star.jpg");
+background-size: cover;
+    }
+    .ball6{
+height: 100px;
+width: 100px;
+border:2px solid #f85b1a;
+border-radius: 50%;
+margin-left: 20px;
+text-align: center;
+position: absolute;
+top:550px;
+right:300px;
+animation-name: myani6;
+animation-duration:8s;
+animation-delay:3s;
+animation-iteration-count: infinite;
+animation-direction: alternate;background-image: url("6star.jpg");
+background-size: cover;
+    }
+    .ball7{
+height: 100px;
+width: 100px;
+border:2px solid #f85b1a;
+border-radius: 50%;
+margin-left: 20px;
+text-align: center;
+position: absolute;
+top:550px;
+right:100px;
+animation-name: myani7;
+animation-duration: 8s;
+animation-delay:3.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+background-image: url("download (6).jpg");
+background-size: cover;
+    }
+
+    .news2{
+      color: red black;
+    }
+    .news1{
+      font-size: 20px;
+      margin-top: 30px;
+    }
+    #clip{
+      border:2px solid black;
+    }
+    .look{
+      border: 5px black solid;
+      height: 400px;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items:center;
+      font-family: fantasy;
+      background-color: blueviolet;
+       background-image: url("love.jpg");
+           background-size: cover;
+    }
+    .block1{
+      height: 350px;
+     width: 400px;
+     border-radius: 10%;
+        background-color:rgba(2, 2, 2, 0.481);
+        color: #fff;
+        text-align: center;
+        box-shadow: 0 20px 20px rgba(0,0,0,0.3) ;
+    }
+    .block2{
+       height: 350px;
+          width: 400px;
+               border-radius: 10%;
+        background-color:rgba(2, 2, 2, 0.481);
+            color: #fff;
+                    text-align: center;
+                            box-shadow: 0 20px 20px rgba(0,0,0,0.3) ;
+    }
+    .block3{
+       height: 350px;
+          width: 400px;
+               border-radius: 10%;
+        background-color:rgba(2, 2, 2, 0.481);
+                 color: #fff;
+                         text-align: center;        box-shadow: 0 20px 20px rgba(0,0,0,0.3) ;
+
+    }
+    .block1:hover{
+      transform:scale(1.1);
+    }.block2:hover{
+      transform:scale(1.1);
+    }.block3:hover{
+      transform:scale(1.1);
+    }
+    .text4{
+      font-size:34px;
+      font-family:fantasy;
+    }
+    .saiyan1{
+      background-color: #f85b1a;
+      height: 50px;
+            border:2px solid;
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.2s;
+         transition-property: all;
+    }
+    .saiyan1:active, .saiyan2:active, .saiyan3:active, .saiyan4:active {
+      transform:scale(1.05);
+    }
+    .saiyan2{
+      background-color:#072083;
+            border:2px solid;
+      height: 50px;transition-timing-function: ease-in-out;
+            transition-duration: 0.2s;
+         transition-property: all;
+    }
+    .saiyan3{
+      background-color:green;
+            border:2px solid;
+      height: 50px;transition-timing-function: ease-in-out;
+            transition-duration: 0.2s;
+         transition-property: all;
+    }
+    .saiyan4{
+      background-color: rgb(222, 220, 220);
+            border:2px solid;
+      height: 50px;transition-timing-function: ease-in-out;
+            transition-duration: 0.2s;
+         transition-property: all;
+    }
+    #container{
+      text-align: center;
+      height:250px;
+      display: flex;
+      border: 2px solid;
+      flex-direction: column;
+    }
+    .jaan1{
+      height: 500px;
+      width:24%;
+      background-color: #f85b1a;
+      display:inline-block;
+      margin-left: 10px;
+      margin-bottom: 10px;
+                  transition: all 0.1s ease-in-out 0.1s;
+    }
+    .jaan2{
+      height: 500px;
+      width:24%;
+      background-color: #072083;
+      display:inline-block;
+      margin-left: 10px;
+      background-image: url("Ultra\ Ego\ Wallpaper.jpg");
+      background-size: cover;
+                  transition: all 0.1s ease-in-out 0.1s;
+    }
+    .jaan3{
+      height: 500px;
+      width:24%;
+      background-color: greenyellow;
+      display:inline-block;
+      margin-left: 10px;
+      background-image: url("broly.jpg");
+      background-size: cover;        
+                  transition: all 0.1s ease-in-out 0.1s;
+
+    }
+    .jaan4{
+      height: 500px;
+      width:24%;
+      background-color: rgb(222, 220, 220);
+      display:inline-block;
+      margin-left: 10px;
+      background-image: url("Gohan\ Bestia.jpg");
+      background-size: cover;         
+                  transition: all 0.1s ease-in-out 0.1s;
+    }
+    .pass{
+      margin-top: 70px;
+      text-align: center;
+    }
+    footer{
+      background-color: rgba(0, 0, 0, 0.9);
+      height: auto;
+      width:97.35%;
+      color: white;
+      padding: 20px;
+    }
+    #logo{
+      font-size: 50px;
+      color: brown;
+    }
+    .navbar{
+      margin-right: 140px;
+      text-decoration: none;
+      color: brown;
+    }
+    #youtuber{
+      background-color: brown;
+    }
+    #anime{
+        padding-left: 30%;
+    }
+    #fullcode{
+      color: black;
+      background-color: white;
+    }
+    #mobilegames{
+        padding-left: 30%;
+    }
+    *{ 
+      text-transform: uppercase;
+    }
+    #informationbar{
+      height: 60px;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: space-evenly;
+      align-items:center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+    #main{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-family: fantasy;
+      font-size: 90px;
+      color: #fff;
+      padding: 20px;
+      line-height: 1.5;
+      border-radius: 10px;
+    }
+    .character{
+      background-color:rgba(179,126,30,255);
+      text-align: center;
+    }
+   
+    .select{
+      height:800px;
+    border:2px ;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    border-radius: 50%;
+      display :flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    #text1{
+      text-align: center;
+    }
+    #upper{
+      display:flex;
+      flex-direction: column;
+      height:100px;
+      justify-content: center;
+      align-items:center;
+    }
+    #lower{
+border:2px solid black;
+background-image: url("hello.jpg");
+background-size: cover;
+    }
+    .overlay-container {
+      position: relative;
+      width: 100%;
+      min-height: 1000px;
+      background: url('https://i.pinimg.com/1200x/56/21/d5/5621d516b29bfdde70487bfdb06415c6.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 20px;
+      box-sizing: border-box;
+      border:2px solid black;
+    }
+    .overlay-text {
+      color: black;
+      padding: 20px;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+    pre { margin: 0; }
+    h1, p { margin: 10px 0; }
+    big{
+      text-align: center;   
+    }
+    .image{
+      position: relative;
+      width: 100%;
+      height: 800px;
+      background: url('https://i.pinimg.com/736x/8d/05/a8/8d05a882bf74a53a639375a2b5d0537e.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    #text{
+      text-align: center;
+    }
+    .footer-sections {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      text-align: left;
+    }
+    .footer-sections div {
+      min-width: 200px;
+    }
+    .jaan1:hover{
+      transform: scale(1.1);
+    }
+        .jaan2:hover{
+      transform: scale(1.1);
+        }
+            .jaan3:hover{
+      transform: scale(1.1);
+
+            }
+                .jaan4:hover{
+      transform: scale(1.1); }
+                @keyframes myani1 {
+                  from {left:-1200px} to {left:100px}}
+                                  @keyframes myani2 {
+                  from {left:-1200px} to {left:300px}}
+                @keyframes myani3 {
+                  from {left:-1200px} to {left:500px}}
+                @keyframes myani4 {
+                  from {left:-1200px} to {left:700px}}
+                @keyframes myani5 {
+                  from {left:-1200px} to {left:900px}}
+                @keyframes myani6 {
+                  from {left:-1200px} to {left:1100px}}
+                @keyframes myani7 {
+                  from {left:-1200px} to {left:1300px}}
+                  #heart{display: flex;
+border: 2px solid black;
+height: 550px;
+ align-items: center;  }
+        .try{
+          width: 100%;
+          height:100%;
+        } 
+        #cheat{
+          display:flex;
+          justify-content: space-around;
+        }  
+        .card {
+  width: 400px;
+  height: 460px;
+  perspective: 1000px;
+  margin: 20px;
+}
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-back {
+  background: #072083;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+  padding: 10px;
+}  
+.navbar{
+position: relative;
+} 
+.navbar:hover::after{
+width: 100%;
+}
+.navbar::after{
+  width: 0px;
+    transition: 0.5s;
+       content:'';
+  background-color: brown;
+  position: absolute;
+  height: 2px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.jaan1{
+  position: relative;
+        overflow: hidden;
+}
+ .jaan1::after ,.jaan2::after,.jaan3::after,.jaan4::after{
+  content: 'Vegeta (ベジータ), Prince of Saiyans (サイヤ人), is a warrior defined by pride, power, and the relentless pursuit of strength. Born on Planet Vegeta, he embodies the ultimate Saiyan ethos: tatakai (戦い, battle), seishin (精神, spirit), and chikara (力, power). Vegeta journey spans from a ruthless conqueror to a hero who fights not only for glory but for his family and universe.';
+  color: #fff;
+position: absolute;
+height: 250px;
+width: 0px;
+top: 250px;
+left: 0px;
+visibility: hidden;
+background-color: rgb(0,0,0,0.3);
+border-radius: 20px;
+transition: 0.5s;
+      overflow: hidden;
+
+    }
+    .jaan1:hover::after,.jaan2:hover::after,.jaan3:hover::after, .jaan4:hover::after{
+      width: 100%;
+      visibility: visible;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="informationbar">
+    <div class="photo"></div>
+     <a  class="navbar" id="logo">dbz</a>
+    <a class="navbar" href="loginpage.html">home</a>
+    <a class="navbar" href="#">explore</a>
+    <a class="navbar" href="#">games</a>
+    <a class="navbar" href="#">contact</a> 
+    <input placeholder=""></input>
+    <button>search</button>
+  </div>
+  <div class="image">
+    <h1 id="main"><big>DRAGON BALL</big></h1>
+    <h1 id="text"><big> HARDCORE DRAGON BALL Z FANS JOIN HERE<br><br><br> </big></h1>
+  </div>
+  <div id="fullcode">
+    <h1 id="text1">YOU ARE WELCOME TO A NEW JOURNEY</h1>
+    <div class="overlay-container">
+      <div class="overlay-text">
+          <p><u>Dragon Ball (Japanese: ドラゴンボール, Hepburn: Doragon Bōru) is a Japanese media franchise created by Akira Toriyama in 1984. The initial manga, written and illustrated by Toriyama, was serialized in Weekly Shōnen Jump from 1984 to 1995, with the 519 individual chapters collected in 42 tankōbon volumes by its publisher Shueisha. Dragon Ball was originally inspired by the classical 16th-century Chinese novel Journey to the West, combined with elements of Hong Kong martial arts films. Dragon Ball characters also use a variety of East Asian martial arts styles, including karate[1][2][3] and Wing Chun (kung fu).[2][3][4] The series follows the adventures of protagonist Son Goku from his childhood through adulthood as he trains in martial arts. He spends his childhood far from civilization until he meets a teen girl named Bulma, who encourages him to join her quest in exploring the world in search of the seven orbs known as the Dragon Balls, which summon a wish-granting dragon when gathered. Along his journey, Goku makes several other friends, becomes a family man, discovers his alien heritage, and battles a wide variety of villains, many of whom also seek the Dragon ball. <br><br>
+
+Toriyama's manga was adapted and divided into two anime series produced by Toei Animation: Dragon Ball and Dragon Ball Z, which together were broadcast in Japan between 1986 - 1996. Additionally, the studio has developed 21 animated feature films and three television specials, as well as an anime sequel series titled Dragon Ball GT (1996–1997) and an anime midquel series titled Dragon Ball Super (2015–2018). From 2009 to 2015, a revised version of Dragon Ball Z aired in Japan under the title Dragon Ball Kai, as a recut that follows the manga's story more faithfully by removing most of the material featured exclusively in the anime. Several companies have developed various types of merchandise based on the series leading to a large media franchise that includes films (both animated and live-action), collectible trading card games, action figures, collections of soundtracks, and numerous video games. Dragon Ball has become one of the highest-grossing media franchises of all time.,<br><br>
+
+The Dragon Ball manga has been sold in over 40 countries and the anime has been broadcast in more than 80 countries. The manga's 42 collected tankōbon volumes have over 160 million copies sold in Japan and 260 million copies sold worldwide,[5][a][c] making it one of the best-selling manga series of all time. Reviewers have praised the art, characterization, and humor of the story. It is widely regarded as one of the greatest and most influential manga series ever made, with many manga artists citing Dragon Ball as a source of inspiration for their own now-popular works. The anime, particularly Dragon Ball Z, is also highly popular around the world and is considered one of the most influential in boosting the popularity of Japanese animation in Western culture. It has had a considerable impact on global popular culture, referenced by and inspiring numerous artists, athletes, celebrities, filmmakers, musicians, and writers around the world.</u></p>
+      </div>
+    </div>
+      </div>
+<div class="ball1"></div><div class="ball2"></div><div class="ball3"></div><div class="ball4"></div><div class="ball5"></div><div class="ball6"></div><div class="ball7"></div>
+<div style="font-size: 40px; text-align: center;">character info board</div>
+    <div id="heart">
+      <div class="jaan1"> <div class="jaanback"><a href="infoboard1.html"><img src="goku.jpg" alt="goku"height="500px" width="100%"></a></div></div>
+      <div class="jaan2"> <div class="jaanback"><a href="infoboard.html"><img src="Ultra Ego Wallpaper.jpg" alt="goku"height="500px" width="100%"></a></div></div>
+      <div class="jaan4"> <div class="jaanback"><a href="infoboard3.html"> <img src="Gohan Bestia.jpg" alt="goku"height="500px" width="100%"></a></div></div>
+      <div class="jaan3"> <div class="jaanback"><a href="infoboard2.html"> <img src="broly.jpg" alt="goku"height="500px" width="100%"></a></div></div>
+    </div>
+        <div style="font-size: 50px;" style="text-align: center;">news area</div>
+       <form action="/action.php">
+     <div class="look">
+    <div class="block1">you might interested<hr>
+    <div class="news1"><p>new dragon ball z manga panel</p><a class="news2" href="#">watch here</a></div>
+  <div class="news1"><p>new dragon ball news and controverseries</p><a class="news2" href="#">watch here</a></div></div>
+    <div class="block2">trending topic<hr></div>
+    <div class="block3">news/articles<hr></div>
+  </div>
+    <!-- <div class="character"> 
+      <h1><p><b>DRAGON BALL Z</b><hr></p>the main ogs</h1>
+      <img src="https://i.pinimg.com/1200x/48/80/80/48808014af481a05a9d6368dc4e410a4.jpg" alt="hello" width="500px">
+      <p><b>GOKU and vegeta</b><hr></p></div> -->
+    <div style="font-size: 50px;" style="text-align: center;">watch you favorite series here</div>
+      <div id="cheat">
+  <div class="card">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="Dragon-Ball.webp" alt="Goku" >
+    </div>
+    <div class="card-back">
+      <h3>dragon ball</h3>
+      <a href="#">link here</a>
+      <p>Saiyan Warrior</p>
+    </div>
+  </div>
+</div>
+  <div class="card">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="dragonballz.webp" alt="Goku" >
+    </div>
+    <div class="card-back">
+      <h3>dragon ball z</h3>
+      <a href="#">link here</a>
+      <p>Saiyan Warrior</p>
+    </div>
+  </div>
+</div>
+  <div class="card">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="Dragon_Ball_Super_Poster.webp" alt="Goku" >
+    </div>
+    <div class="card-back">
+      <h3>dragon ball super</h3>
+      <a href="#">link here</a>
+      <p>Saiyan Warrior</p>
+    </div>
+  </div>
+</div>
+  <div class="card">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="Dragon-Ball-Daima.webp" alt="Goku" >
+    </div>
+    <div class="card-back">
+      <h3>dragon ball z daima</h3>
+      <a href="#">link here</a>
+      <p>Saiyan Warrior</p>
+    </div>
+  </div>
+</div></div>
+    <div id="container">
+    <pre class="text4">WHat is your favourite in series</pre>
+    <div id="choice">
+   <div class="saiyan1"> <label for="100">
+      <div class="try"><input type="radio" value="goku" name="character" id="100" >dragon ball</div>
+    </label></div>
+   <div class="saiyan2"> <label for="101">
+     <div class="try"> <input type="radio" value="vegeta" name="character" id="101">dragon ball z</div>
+    </label></div>
+   <div class="saiyan3"> <label for="102">
+     <div class="try"> <input type="radio" value="BOTH" name="character" id="102">dragon ball super</div>
+    </label></div>
+    <div class="saiyan4">
+     <label for="103"><div class="try"> <input type="radio"value="gohan" name="character" id="103">dragon ball gt </div> </label>
+    </div>
+    <div>
+    <input type="submit" value="submit">
+    </div></form>
+    <div id="lower">
+    <div id="upper">
+             <div class="interest" style="font-size: 50px;"> <h2 >Choose Your Interest</h2></div>
+
+     <select >
+      <option value="">-- Select --</option>
+      <option value="pc">💻 PC Games</option>
+      <option value="mobile">📱 Mobile Emulator Games</option>
+    </select>
+      </div>
+      <div class="select">
+    <div class="content" id="pc">
+      <h3>PC Games</h3>
+      <ul>
+        <li>Dragon Ball Z Kakarot</li>
+        <a href="https://koyso.com/game/169">
+          <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/851850/library_600x900.jpg" width="200">
+        </a>
+        <li>Dragon Ball Z Sparking Zero</li>
+        <a href="https://koyso.com/game/1133">
+          <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1790600/library_600x900.jpg" width="200">
+        </a>
+      </ul>
+    </div>
+    <div class="content" id="mobile">
+      <h3>Mobile Emulator Games</h3>
+      <ul>
+        <li>Dragon Ball Z Tenkaichi Tag Team (PSP)</li>
+        <a href="https://www.romspedia.com/roms/playstation-portable/dragon-ball-z-tenkaichi-tag-team">
+          <img src="https://static.romspedia.com/webp/roms/dragon-ball-z-tenkaichi-tag-team-psp-cover-340x483.webp" width="200">
+        </a>
+        <li>Dragon Ball Z Budokai Tenkaichi 3 (PS2)</li>
+        <a href="https://www.romspedia.com/roms/playstation-2/dragon-ball-z-budokai-tenkaichi-3">
+          <img src="https://static.romspedia.com/webp/roms/dragon-ball-z-budokai-tenkaichi-3-ps2-cover-340x483.webp" width="200">
+        </a>
+      </ul>
+    </div>
+  </div> 
+  </div>
+<!-- 
+  <div id="clipper">
+  <div id="clip">
+       <div id="youtuber">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/R9PSipmDAnA?si=OEBYVmpBeCFenfXJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <div class="choice">
+    <select name="your choice of info" id="history">
+        <option value="goku">goku history</option>
+        <option value="vegeta">vegeta history</option>
+        <option value="gohan">gohan history</option>
+    </select>
+  </div></div>
+            <div class="dragon">
+<input type="text" placeholder="type your comment here"></input>
+           <div class="comment">comment section</div>
+    <input placeholder="r18+ comment here"></textarea>
+    <br></div> -->
+
+    <footer>
+      <div class="footer-sections">
+        <div class="contact">
+          <h3>Contact Us</h3>
+          <div class="info"><a>siddhantrajliwal52@gmail.com</a></div>
+          <div class="info"><a>9625xxxxxxxx</a></div>
+          <div class="info"><a>siddhant.linkedin</a></div>
+        </div>
+        <div class="member">
+          <h3>Team Members</h3>
+          <div class="mem"><a>siddhant rajliwal</a></div>
+          <div class="mem"><a>yash rajliwal</a></div>
+          <div class="mem"><a>siddhant rajliwal</a></div>
+        </div>
+        <div class="join">
+          <h3>Follow Us On</h3>
+          <div class="mem"><a>instagram.com</a></div>
+          <div class="mem"><a>facebook.com</a></div>
+          <div class="mem"><a>google.com</a></div>
+        </div>
+      </div>
+      <div class="pass">
+        <p>made by siddhant rajliwal and team members<br>
+        @2024-2025,dbz.com,inc.or its affiliates</p>
+      </div>
+       <div id="like">     <form>
+  <label>Rate our site:</label><br>
+  <input type="radio" name="rate"> ⭐
+  <input type="radio" name="rate"> ⭐⭐
+  <input type="radio" name="rate"> ⭐⭐⭐
+  <input type="radio" name="rate"> ⭐⭐⭐⭐
+  <input type="radio" name="rate"> ⭐⭐⭐⭐⭐
+</form></div>
+    </footer>
+  </div>
+  </div>
+</body>
+</body>
+</html>
