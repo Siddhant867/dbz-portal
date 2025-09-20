@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            font-family:fantasy ;
+            text-transform: uppercase;
+        }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        background-image: url("login.png");
+        background-size: cover;
+        background-position: center;
+    }
+    #login{
+height:350px;
+        width:300px;
+        border-radius: 10px;
+        border: 2px solid rgba(255,255,255,0.2);
+        background:transparent ;
+        backdrop-filter: blur(5px);
+        z-index: 1;
+                background:rgba(5, 204, 239, 0.4); 
+    }
+    .log{
+        text-align:center;
+        font-size: 20px;
+    }
+    .check{
+          width:90%;
+          height:25px;
+          margin-top: 20px;
+          border-radius: 20px;
+        }
+        .place{
+            text-align: center;
+        }
+        #login, #register {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    margin-right: 20px;
+}
+        button{
+border-radius: 20px;
+        }
+        #register{
+           height:400px;
+        width:300px;
+        border-radius: 10px;
+        border: 2px solid rgba(255,255,255,0.2);
+        background:rgba(5, 204, 239, 0.4);
+        backdrop-filter: blur(5px); 
+        z-index: 0;
+        }
+        #register:hover{
+            z-index: 2;
+        }
+    </style>
+    <form >
+    <div id="login">
+    <div class="log"><h1>login</h1></div>
+        <div class="place"><label for="user"></label><input id="user" class="check"type="text" placeholder="username"></div>
+       <div class="place"><input class="check" type="password" placeholder="password"></div>
+        <div style="text-align: center; margin-top: 20px; "><button style="width: 90%; height:30px; background-color:rgba(5, 204, 239, 1) ;">login</button></div>   
+       <div style="margin-top:20px;"class="box"><input id="remember" type="checkbox">  <label for="remember">remember me</label> <a style="margin-left: 60px; color:rgba(5, 204, 239, 1) " href="#">forgot password</a>
+       </div><div style="text-align: center; margin-top:20px;"> didn't have a account <a style="color:rgba(5, 204, 239, 1) ">register</a>
+</div></div></form>
+    <form >
+    <div id="register">
+    <div class="log"><h1>register</h1></div>
+        <div class="place"><label for="user"></label><input id="user" class="check"type="text" placeholder="enter your username"></div>
+       <div class="place"><input class="check" type="password" placeholder="new password"></div>
+       <div class="place"><input class="check" type="password" placeholder=" confirm password"></div>
+        <div style="text-align: center; margin-top: 20px; "><button style="width: 90%; height:30px; background-color:rgba(5, 204, 239, 1);">register</button></div>   
+       <div style="margin-top:20px;"class="box"><input id="remember" type="checkbox">  <label for="remember">remember me</label> 
+       </div><div style="text-align: center; margin-top:20px;"> already have a account<a style="color:rgba(5, 204, 239, 1) ">login</a>
+</div></div></form>
+</body>
+</html>
