@@ -23,9 +23,6 @@
       background-color: burlywood;
       align-items: center;
     }
-    #like{
-      align-self:flex-end;
-    }
     .ball1{
 height: 100px;
 width: 100px;
@@ -130,7 +127,7 @@ animation-delay:3s;
 animation-iteration-count: infinite;
 animation-direction: alternate;background-image: url("6star.jpg");
 background-size: cover;
-    }
+    }    
     .ball7{
 height: 100px;
 width: 100px;
@@ -149,7 +146,6 @@ animation-direction: alternate;
 background-image: url("download (6).jpg");
 background-size: cover;
     }
-
     .news2{
       color: red black;
     }
@@ -162,17 +158,18 @@ background-size: cover;
     }
     .look{
       border: 5px black solid;
-      height: 400px;
+      height: 800px;
       display:flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-around;
       align-items:center;
       font-family: fantasy;
       background-color: blueviolet;
        background-image: url("love.jpg");
            background-size: cover;
+           background-position: center;
     }
-    .block1{
+    .block1 , .block2 ,.block3{
       height: 350px;
      width: 400px;
      border-radius: 10%;
@@ -180,30 +177,9 @@ background-size: cover;
         color: #fff;
         text-align: center;
         box-shadow: 0 20px 20px rgba(0,0,0,0.3) ;
+        margin-left: 40px ;
     }
-    .block2{
-       height: 350px;
-          width: 400px;
-               border-radius: 10%;
-        background-color:rgba(2, 2, 2, 0.481);
-            color: #fff;
-                    text-align: center;
-                            box-shadow: 0 20px 20px rgba(0,0,0,0.3) ;
-    }
-    .block3{
-       height: 350px;
-          width: 400px;
-               border-radius: 10%;
-        background-color:rgba(2, 2, 2, 0.481);
-                 color: #fff;
-                         text-align: center;        box-shadow: 0 20px 20px rgba(0,0,0,0.3) ;
-
-    }
-    .block1:hover{
-      transform:scale(1.1);
-    }.block2:hover{
-      transform:scale(1.1);
-    }.block3:hover{
+    .block1:hover , .block2:hover ,.block3:hover{
       transform:scale(1.1);
     }
     .text4{
@@ -423,18 +399,9 @@ background-size: cover;
     .footer-sections div {
       min-width: 200px;
     }
-    .jaan1:hover{
+    .jaan1:hover  ,   .jaan2:hover  ,  .jaan3:hover  ,  .jaan4:hover{
       transform: scale(1.1);
     }
-        .jaan2:hover{
-      transform: scale(1.1);
-        }
-            .jaan3:hover{
-      transform: scale(1.1);
-
-            }
-                .jaan4:hover{
-      transform: scale(1.1); }
                 @keyframes myani1 {
                   from {left:-1200px} to {left:100px}}
                                   @keyframes myani2 {
@@ -522,8 +489,7 @@ width: 100%;
   position: relative;
         overflow: hidden;
 }
- .jaan1::after ,.jaan2::after,.jaan3::after,.jaan4::after{
-  content: 'Vegeta (ベジータ), Prince of Saiyans (サイヤ人), is a warrior defined by pride, power, and the relentless pursuit of strength. Born on Planet Vegeta, he embodies the ultimate Saiyan ethos: tatakai (戦い, battle), seishin (精神, spirit), and chikara (力, power). Vegeta journey spans from a ruthless conqueror to a hero who fights not only for glory but for his family and universe.';
+ .jaan1::after , .jaan2::after,.jaan3::after,.jaan4::after{
   color: #fff;
 position: absolute;
 height: 250px;
@@ -535,12 +501,26 @@ background-color: rgb(0,0,0,0.3);
 border-radius: 20px;
 transition: 0.5s;
       overflow: hidden;
-
     }
+     .jaan1::after{
+content: 'Son Gokū (孫悟空), known simply as Goku, is the central protagonist of the entire Dragon Ball (ドラゴンボール) franchise created by Akira Toriyama (鳥山 明). Introduced first as a small boy with a monkey tail living in the mountains, his journey spans from a curious, innocent martial artist to the most powerful warrior in the multiverse. Goku name originates from Sun Wukong (孫悟空), the legendary Monkey King from the classic Chinese novel Journey to the West (西遊記).';
+     }
+      .jaan2::after{
+  content: 'Vegeta (ベジータ), Prince of Saiyans (サイヤ人), is a warrior defined by pride, power, and the relentless pursuit of strength. Born on Planet Vegeta, he embodies the ultimate Saiyan ethos: tatakai (戦い, battle), seishin (精神, spirit), and chikara (力, power). Vegeta journey spans from a ruthless conqueror to a hero who fights not only for glory but for his family and universe.';
+      }
+            .jaan4::after{
+        content: 'Gohan (孫悟飯) is the first son of Goku (孫悟空) and Chi-Chi (チチ), a character whose journey in the Dragon Ball universe (ドラゴンボール) is uniquely shaped by both his Saiyan heritage (サイヤ人の血) and human upbringing. Unlike his father, Gohan’s path intertwines extraordinary combat potential with an innate curiosity, intelligence, and a compassionate heart. ';
+      }
+            .jaan3::after{
+        content: ' Broly (ブロリー), often called the Legendary Super Saiyan (伝説のスーパーサイヤ人), is among the most formidable and popular characters in the Dragon Ball (ドラゴンボール) universe. Initially introduced in the non-canon Dragon Ball Z movies, Broly’s sheer power, tragic backstory, and unique Saiyan physiology (サイヤ人の体質) captured the imagination of fans worldwide. ';
+      }
     .jaan1:hover::after,.jaan2:hover::after,.jaan3:hover::after, .jaan4:hover::after{
       width: 100%;
       visibility: visible;
       overflow: hidden;
+    }
+    .yash{
+      display: flex;
     }
   </style>
 </head>
@@ -577,16 +557,16 @@ The Dragon Ball manga has been sold in over 40 countries and the anime has been 
       <div class="jaan1"> <div class="jaanback"><a href="infoboard1.html"><img src="goku.jpg" alt="goku"height="500px" width="100%"></a></div></div>
       <div class="jaan2"> <div class="jaanback"><a href="infoboard.html"><img src="Ultra Ego Wallpaper.jpg" alt="goku"height="500px" width="100%"></a></div></div>
       <div class="jaan4"> <div class="jaanback"><a href="infoboard3.html"> <img src="Gohan Bestia.jpg" alt="goku"height="500px" width="100%"></a></div></div>
-      <div class="jaan3"> <div class="jaanback"><a href="infoboard2.html"> <img src="broly.jpg" alt="goku"height="500px" width="100%"></a></div></div>
-    </div>
+      <div class="jaan3"> <div class="jaanback"><a href="infoboard2.html"> <img src="broly.jpg" alt="goku"height="500px" width="100%"></a></div></div>     </div>   <a href="infoboard4.html">   <button>enter for more character info</button></a>
         <div style="font-size: 50px;" style="text-align: center;">news area</div>
-       <form action="/action.php">
+       <!-- <form action="/action.php"> -->
      <div class="look">
-    <div class="block1">you might interested<hr>
-    <div class="news1"><p>new dragon ball z manga panel</p><a class="news2" href="#">watch here</a></div>
-  <div class="news1"><p>new dragon ball news and controverseries</p><a class="news2" href="#">watch here</a></div></div>
+   <div class="yash"> <div class="block1">you might interested<hr></div>
     <div class="block2">trending topic<hr></div>
     <div class="block3">news/articles<hr></div>
+  </div><div class="yash"> <div class="block1"><hr></div>
+    <div class="block2"><hr></div>
+    <div class="block3"><hr></div></div>
   </div>
     <!-- <div class="character"> 
       <h1><p><b>DRAGON BALL Z</b><hr></p>the main ogs</h1>
@@ -717,7 +697,6 @@ The Dragon Ball manga has been sold in over 40 countries and the anime has been 
            <div class="comment">comment section</div>
     <input placeholder="r18+ comment here"></textarea>
     <br></div> -->
-
     <footer>
       <div class="footer-sections">
         <div class="contact">
@@ -753,7 +732,7 @@ The Dragon Ball manga has been sold in over 40 countries and the anime has been 
 </form></div>
     </footer>
   </div>
-  </div>
-</body>
-</body>
+</div>
+</body> 
+<script></script>
 </html>
