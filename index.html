@@ -4,13 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DBZ Fan Portal</title>
-  
-  <style>   .photo{
-      height:50px;
-      width: 50px;
-      background-image: url("download (7).jpg");
-      background-size: cover;
-    }
+  <style>   
     .comment{
       font-size: 50px;
       align-self: flex-start;
@@ -23,129 +17,28 @@
       background-color: burlywood;
       align-items: center;
     }
-    .ball1{
-height: 100px;
-width: 100px;
-border:2px solid #f85b1a;
-border-radius: 50%;
-margin-left: 20px;
-text-align: center;
-position: absolute;
-animation-name: myani1;
-animation-duration: 8s;
-top:550px;
-right:1300px;
-animation-delay:0.5s;
-animation-iteration-count: infinite;
-animation-direction: alternate;
-background-image: url("download (2).jpg");
-background-size: cover;
+    .ball1 ,.ball2,.ball3,.ball4,.ball5,.ball6,.ball7{
+      height: 100px;
+      width: 100px;
+      border:2px solid #f85b1a;
+      border-radius: 50%;
+      margin-left: 20px;
+      text-align: center;
+      position: absolute;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      background-size: cover;
     }
-        .ball2{
-height: 100px;
-width: 100px;
-border:2px solid #f85b1a;
-border-radius: 50%;
-margin-left: 20px;
-text-align: center;
-position: absolute;
-animation-name: myani2;
-animation-duration: 8s;
-top:550px;
-right:1100px;
-animation-delay:1s;
-animation-iteration-count: infinite;
-animation-direction: alternate;background-image: url("download (3).jpg");
-background-size: cover;
-    }
-    .ball3{
-height: 100px;
-width: 100px;
-border:2px solid #f85b1a;
-border-radius: 50%;
-margin-left: 20px;
-text-align: center;
-position: absolute;
-top:550px;
-right:900px;
-animation-name: myani3;
-animation-duration: 8s;
-animation-delay:1.5s;
-animation-iteration-count: infinite;
-animation-direction: alternate;
-background-image: url("download (5).jpg");
-background-size: cover;
-    }
-    .ball4{
-height: 100px;
-width: 100px;
-border:2px solid #f85b1a;
-border-radius: 50%;
-margin-left: 20px;
-text-align: center;
-position: absolute;
-top:550px;
-right:700px;
-animation-name: myani4;
-animation-duration: 8s;
-animation-delay:2s;
-animation-iteration-count: infinite;
-animation-direction: alternate;background-image: url("4star.jpg");
-background-size: cover;
-    }
-    .ball5{
-height: 100px;
-width: 100px;
-border:2px solid #f85b1a;
-border-radius: 50%;
-margin-left: 20px;
-text-align: center;
-position: absolute;
-top:550px;
-right:500px;
-animation-name: myani5;
-animation-duration: 8s;
-animation-delay:2.5s;
-animation-iteration-count: infinite;
-animation-direction: alternate;
-background-image: url("5star.jpg");
-background-size: cover;
-    }
-    .ball6{
-height: 100px;
-width: 100px;
-border:2px solid #f85b1a;
-border-radius: 50%;
-margin-left: 20px;
-text-align: center;
-position: absolute;
-top:550px;
-right:300px;
-animation-name: myani6;
-animation-duration:8s;
-animation-delay:3s;
-animation-iteration-count: infinite;
-animation-direction: alternate;background-image: url("6star.jpg");
-background-size: cover;
-    }    
-    .ball7{
-height: 100px;
-width: 100px;
-border:2px solid #f85b1a;
-border-radius: 50%;
-margin-left: 20px;
-text-align: center;
-position: absolute;
-top:550px;
-right:100px;
-animation-name: myani7;
-animation-duration: 8s;
-animation-delay:3.5s;
-animation-iteration-count: infinite;
-animation-direction: alternate;
-background-image: url("download (6).jpg");
-background-size: cover;
-    }
+
+    .ball1 { top:550px; right:1300px; animation-name: myani1; animation-delay:0.5s; background-image: url("download (2).jpg"); }
+    .ball2 { top:550px; right:1100px; animation-name: myani2; animation-delay:1s;   background-image: url("download (3).jpg"); }
+    .ball3 { top:550px; right:900px;  animation-name: myani3; animation-delay:1.5s; background-image: url("download (5).jpg"); }
+    .ball4 { top:550px; right:700px;  animation-name: myani4; animation-delay:2s;   background-image: url("4star.jpg"); }
+    .ball5 { top:550px; right:500px;  animation-name: myani5; animation-delay:2.5s; background-image: url("5star.jpg"); }
+    .ball6 { top:550px; right:300px;  animation-name: myani6; animation-delay:3s;   background-image: url("6star.jpg"); }
+    .ball7 { top:550px; right:100px;  animation-name: myani7; animation-delay:3.5s; background-image: url("download (6).jpg"); }
+
     .news2{
       color: red black;
     }
@@ -367,11 +260,14 @@ background-size: cover;
       border:2px solid black;
     }
     .overlay-text {
-      color: black;
+      color: aqua;
       padding: 20px;
       font-size: 1em;
       font-family: Arial, sans-serif;
       line-height: 1.5;
+      background-color: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(3px);
+      border-radius: 20px;
     }
     pre { margin: 0; }
     h1, p { margin: 10px 0; }
@@ -484,11 +380,6 @@ width: 100%;
   bottom: 0px;
   left: 0px;
 }
-
-.jaan1{
-  position: relative;
-        overflow: hidden;
-}
  .jaan1::after , .jaan2::after,.jaan3::after,.jaan4::after{
   color: #fff;
 position: absolute;
@@ -522,18 +413,110 @@ content: 'Son Gokū (孫悟空), known simply as Goku, is the central protagonis
     .yash{
       display: flex;
     }
+@media (max-width: 480px) {
+  #informationbar{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+  }
+  .res{
+    display: flex;
+  }
+  #informationbar input { height:10px;
+    width: 100px; }
+  #informationbar button{height:10px;
+    width: 40px;
+    font-size: 9px;
+    object-fit: cover;
+  }
+  #informationbar .navbar{
+    font-size: 10px;
+    margin-right: 10px;
+  }
+    #logo{
+    font-size: 40px;
+  }
+  .ball1, .ball2, .ball3, .ball4, .ball5, .ball6, .ball7 { height: 40px; width: 40px; animation-duration: 6s; }
+  #fullcode { padding-bottom: 300px; }
+  .card { width: 100%; }
+  footer .footer-sections { flex-direction: column; }
+                  @keyframes myani1 {
+                  from {left:-1200px} to {left:40px}}
+                                  @keyframes myani2 {
+                  from {left:-1200px} to {left:100px}}
+                @keyframes myani3 {
+                  from {left:-1200px} to {left:160px}}
+                @keyframes myani4 {
+                  from {left:-1200px} to {left:220px}}
+                @keyframes myani5 {
+                  from {left:-1200px} to {left:280px}}
+                @keyframes myani6 {
+                  from {left:-1200px} to {left:340px}}
+                @keyframes myani7 {
+                  from {left:-1200px} to {left:400px}}
+                  .overlay-container{
+                    width: 390px;
+                    height:200px;
+                    background-position: center;
+                  }
+                                .overlay-container   .overlay-text{visibility: hidden;
+                  }
+                  *{
+                     font-size: 18px; }  
+                     .card{
+                      height:200px;
+                      margin: 5px;
+                     }  
+                     .block1,.block2,.block3{
+                      height: 250px;
+                      width: 125px;
+                      margin-left: 10px;
+                     }    
+                    .jaan1,.jaan2,.jaan3,.jaan4, .jaanback a img{
+                      height: 250px;
+                     }
+                     #heart{
+                      height:275px;
+                     }
+                      .jaan1::after , .jaan2::after,.jaan3::after,.jaan4::after{
+                        top: 50%;
+                        height:125px;
+                        overflow: hidden;
+                        backdrop-filter: blur(5px);
+                      }
+                                          .jaan2::after {
+                                            left: -100%;
+                                           }                .jaan4::after {
+                                            left: -200%;
+                                           }                    .jaan3::after{
+                                            left:-300%;
+                                           }
+                          .jaan1:hover::after,.jaan2:hover::after,.jaan3:hover::after, .jaan4:hover::after{
+                            width: 370px;
+                                                    height: 50%;
+                                                    font-size: 10px;
+                            overflow:hidden;
+                          }
+  
+}
+.image + #fullcode, #fullcode + #heart { margin-top: 18px; }
+footer { box-sizing: border-box; width: 100%; overflow: hidden; }
+
+.select { overflow: hidden; }
   </style>
 </head>
 <body>
   <div id="informationbar">
-    <div class="photo"></div>
-     <a  class="navbar" id="logo">dbz</a>
-    <a class="navbar" href="loginpage.html">home</a>
+    <div class="res">           <img src="download (7).jpg" style="      height:50px;
+      width: 50px;">
+     <a   id="logo">dbz</a></div>
+     <div class="re">    <a class="navbar" href="loginpage.html">home</a>
     <a class="navbar" href="#">explore</a>
     <a class="navbar" href="#">games</a>
     <a class="navbar" href="#">contact</a> 
-    <input placeholder=""></input>
-    <button>search</button>
+          <input placeholder=""></input>
+    <button>search</button>  
+</div>
   </div>
   <div class="image">
     <h1 id="main"><big>DRAGON BALL</big></h1>
@@ -543,15 +526,20 @@ content: 'Son Gokū (孫悟空), known simply as Goku, is the central protagonis
     <h1 id="text1">YOU ARE WELCOME TO A NEW JOURNEY</h1>
     <div class="overlay-container">
       <div class="overlay-text">
-          <p><u>Dragon Ball (Japanese: ドラゴンボール, Hepburn: Doragon Bōru) is a Japanese media franchise created by Akira Toriyama in 1984. The initial manga, written and illustrated by Toriyama, was serialized in Weekly Shōnen Jump from 1984 to 1995, with the 519 individual chapters collected in 42 tankōbon volumes by its publisher Shueisha. Dragon Ball was originally inspired by the classical 16th-century Chinese novel Journey to the West, combined with elements of Hong Kong martial arts films. Dragon Ball characters also use a variety of East Asian martial arts styles, including karate[1][2][3] and Wing Chun (kung fu).[2][3][4] The series follows the adventures of protagonist Son Goku from his childhood through adulthood as he trains in martial arts. He spends his childhood far from civilization until he meets a teen girl named Bulma, who encourages him to join her quest in exploring the world in search of the seven orbs known as the Dragon Balls, which summon a wish-granting dragon when gathered. Along his journey, Goku makes several other friends, becomes a family man, discovers his alien heritage, and battles a wide variety of villains, many of whom also seek the Dragon ball. <br><br>
+          <p>Dragon Ball (Japanese: ドラゴンボール, Hepburn: Doragon Bōru) is a Japanese media franchise created by Akira Toriyama in 1984. The initial manga, written and illustrated by Toriyama, was serialized in Weekly Shōnen Jump from 1984 to 1995, with the 519 individual chapters collected in 42 tankōbon volumes by its publisher Shueisha. Dragon Ball was originally inspired by the classical 16th-century Chinese novel Journey to the West, combined with elements of Hong Kong martial arts films. Dragon Ball characters also use a variety of East Asian martial arts styles, including karate[1][2][3] and Wing Chun (kung fu).[2][3][4] The series follows the adventures of protagonist Son Goku from his childhood through adulthood as he trains in martial arts. He spends his childhood far from civilization until he meets a teen girl named Bulma, who encourages him to join her quest in exploring the world in search of the seven orbs known as the Dragon Balls, which summon a wish-granting dragon when gathered. Along his journey, Goku makes several other friends, becomes a family man, discovers his alien heritage, and battles a wide variety of villains, many of whom also seek the Dragon ball. <br><br>
 
 Toriyama's manga was adapted and divided into two anime series produced by Toei Animation: Dragon Ball and Dragon Ball Z, which together were broadcast in Japan between 1986 - 1996. Additionally, the studio has developed 21 animated feature films and three television specials, as well as an anime sequel series titled Dragon Ball GT (1996–1997) and an anime midquel series titled Dragon Ball Super (2015–2018). From 2009 to 2015, a revised version of Dragon Ball Z aired in Japan under the title Dragon Ball Kai, as a recut that follows the manga's story more faithfully by removing most of the material featured exclusively in the anime. Several companies have developed various types of merchandise based on the series leading to a large media franchise that includes films (both animated and live-action), collectible trading card games, action figures, collections of soundtracks, and numerous video games. Dragon Ball has become one of the highest-grossing media franchises of all time.,<br><br>
 
 The Dragon Ball manga has been sold in over 40 countries and the anime has been broadcast in more than 80 countries. The manga's 42 collected tankōbon volumes have over 160 million copies sold in Japan and 260 million copies sold worldwide,[5][a][c] making it one of the best-selling manga series of all time. Reviewers have praised the art, characterization, and humor of the story. It is widely regarded as one of the greatest and most influential manga series ever made, with many manga artists citing Dragon Ball as a source of inspiration for their own now-popular works. The anime, particularly Dragon Ball Z, is also highly popular around the world and is considered one of the most influential in boosting the popularity of Japanese animation in Western culture. It has had a considerable impact on global popular culture, referenced by and inspiring numerous artists, athletes, celebrities, filmmakers, musicians, and writers around the world.</u></p>
-      </div>
     </div>
       </div>
-<div class="ball1"></div><div class="ball2"></div><div class="ball3"></div><div class="ball4"></div><div class="ball5"></div><div class="ball6"></div><div class="ball7"></div>
+<div class="ball1"></div>
+<div class="ball2"></div>
+<div class="ball3"></div>
+<div class="ball4"></div>
+<div class="ball5"></div>
+<div class="ball6"></div>
+<div class="ball7"></div>
 <div style="font-size: 40px; text-align: center;">character info board</div>
     <div id="heart">
       <div class="jaan1"> <div class="jaanback"><a href="infoboard1.html"><img src="goku.jpg" alt="goku"height="500px" width="100%"></a></div></div>
@@ -679,7 +667,7 @@ The Dragon Ball manga has been sold in over 40 countries and the anime has been 
     </div>
   </div> 
   </div>
-
+<!-- 
   <div id="clipper">
   <div id="clip">
        <div id="youtuber">
