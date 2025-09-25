@@ -596,13 +596,39 @@ footer { box-sizing: border-box; width: 100%; overflow: hidden; }
   .ci-row{ flex-direction: column; }
   #comments-ideas-section{ padding: 12px; }
 }
-
+#again{
+  background-color: #fff;
+  transition: 0.3s;
+}
+#dark:checked ~ #again #page {
+  background-color: #000;
+  color: #fff; 
+}
+#dark:checked ~ #again #page p,
+#dark:checked ~ #again #page div,
+#dark:checked ~ #again #page span {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#dark:checked ~ #again #page .look,
+#dark:checked ~ #again #page .select,
+#dark:checked ~ #again #page #comments-ideas-section {
+  background-color: rgba(0,0,0,0.7);
+  border-color: rgba(255,255,255,0.2);
+}
+#dark ,#number{
+  position: sticky;
+  z-index: 999;
+  top: 100px;
+}
   </style>
 </head>
 <body>
-  <div id="informationbar">
-    <div class="res">           <img src="download (7).jpg" style="      height:50px;
-      width: 50px;">
+          <label for="dark" id="number">dark mode</label><input style="height: 20px;" id="dark" type="checkbox" placeholder="dark mode">
+          <diV id="again"> 
+                <div id="page">
+   <div id="informationbar">
+    <div class="res">    
      <a   id="logo">dbz</a></div>
      <div class="re">    <a class="navbar" href="loginpage.html">home</a>
     <a class="navbar" href="#">explore</a>
@@ -863,7 +889,7 @@ The Dragon Ball manga has been sold in over 40 countries and the anime has been 
 </form></div>
     </footer>
   </div>
-</div>
+</div>    </diV>
 </body> 
 <script>
   let marks=[100,200,300,400,500];
