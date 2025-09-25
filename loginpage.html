@@ -1,86 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login/Register Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+background-image: url("download (7).jpg"); 
+background-size: cover; 
+background-position: center;  }
+    .page {
+      display: none;
+    }
+    .page.active {
+      display: flex;
+    }
+
+    .form-wrapper, .side-panel {
+      width: 300px;
+      height: 400px;
+    }
+    .form-wrapper {
+      position: relative;
+    }
+    .form-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid rgba(255,255,255,0.2);
+      background: rgba(251, 166, 8, 0.4);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      box-shadow: -5px -5px 10px orangered, 5px 5px 10px orange;
+      transition: opacity 0.5s ease;
+      padding: 20px;
+    }
+    .form-box:hover {
+      box-shadow: -10px -10px 20px orangered, 10px 10px 20px orange;
+    }
+    .log {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .check {
+      width: 90%;
+      height: 25px;
+      margin-top: 20px;
+      border-radius: 20px;
+      padding: 5px;
+    }
+    .place {
+      text-align: center;
+    }
+    button {
+      border-radius: 20px;
+      width: 90%;
+      height: 30px;
+      background-color: rgba(5, 204, 239, 1);
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .box {
+      margin-top: 20px;
+      text-align: center;
+    }
+    a {
+      color: rgba(5, 204, 239, 1);
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .side-panel {
+        width: 400px;
+      background-color:rgba(240, 161, 13,0.9);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px -5px 10px white, 5px 5px 10px white;
+      padding: 20px;
+      backdrop-filter: blur(5px);
+      margin-right: 1px;
+    }
+
+    .side-panel h2 {
+      margin-bottom: 20px;
+    }
+
+    .side-panel a {
+      font-size: 18px;
+      margin: 10px 0;
+      color: white;
+    }
+
+    .side-panel i {
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
-    <style>
-        *{
-            font-family:fantasy ;
-            text-transform: uppercase;
-        }
-    body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 90vh;
-        background-image: url("login.png");
-        background-size: cover;
-        background-position: center;
-    }
-    #login{
-height:350px;
-        width:300px;
-        border-radius: 10px;
-        border: 2px solid rgba(255,255,255,0.2);
-        background:transparent ;
-        backdrop-filter: blur(5px);
-        z-index: 1;
-                background:rgba(5, 204, 239, 0.4); 
-    }
-    .log{
-        text-align:center;
-        font-size: 20px;
-    }
-    .check{
-          width:90%;
-          height:25px;
-          margin-top: 20px;
-          border-radius: 20px;
-        }
-        .place{
-            text-align: center;
-        }
-        #login, #register {
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    margin-right: 20px;
-}
-        button{
-border-radius: 20px;
-        }
-        #register{
-           height:400px;
-        width:300px;
-        border-radius: 10px;
-        border: 2px solid rgba(255,255,255,0.2);
-        background:rgba(5, 204, 239, 0.4);
-        backdrop-filter: blur(5px); 
-        z-index: 0;
-        }
-        #register:hover{
-            z-index: 2;
-        }
-    </style>
-    <form >
-    <div id="login">
-    <div class="log"><h1>login</h1></div>
-        <div class="place"><label for="user"></label><input id="user" class="check"type="text" placeholder="username"></div>
-       <div class="place"><input class="check" type="password" placeholder="password"></div>
-        <div style="text-align: center; margin-top: 20px; "><button style="width: 90%; height:30px; background-color:rgba(5, 204, 239, 1) ;">login</button></div>   
-       <div style="margin-top:20px;"class="box"><input id="remember" type="checkbox">  <label for="remember">remember me</label> <a style="margin-left: 60px; color:rgba(5, 204, 239, 1) " href="#">forgot password</a>
-       </div><div style="text-align: center; margin-top:20px;"> didn't have a account <a style="color:rgba(5, 204, 239, 1) ">register</a>
-</div></div></form>
-    <form >
-    <div id="register">
-    <div class="log"><h1>register</h1></div>
-        <div class="place"><label for="user"></label><input id="user" class="check"type="text" placeholder="enter your username"></div>
-       <div class="place"><input class="check" type="password" placeholder="new password"></div>
-       <div class="place"><input class="check" type="password" placeholder=" confirm password"></div>
-        <div style="text-align: center; margin-top: 20px; "><button style="width: 90%; height:30px; background-color:rgba(5, 204, 239, 1);">register</button></div>   
-       <div style="margin-top:20px;"class="box"><input id="remember" type="checkbox">  <label for="remember">remember me</label> 
-       </div><div style="text-align: center; margin-top:20px;"> already have a account<a style="color:rgba(5, 204, 239, 1) ">login</a>
-</div></div></form>
+  <div class="page active" id="loginPage">
+    <div class="form-wrapper">
+      <form>
+        <div class="form-box">
+          <div class="log"><h1>login</h1></div>
+          <div class="place"><input class="check" type="text" placeholder="username" /></div>
+          <div class="place"><input class="check" type="password" placeholder="password" /></div>
+          <div class="place"><button>login</button></div>
+          <div class="box">
+            <input id="remember" type="checkbox" />
+            <label for="remember">remember me</label>
+            <a style="margin-left: 20px;" href="#">forgot password</a>
+          </div>
+          <div style="text-align: center; margin-top: 20px;">
+            don't have an account? <a id="showRegister">register</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="side-panel">
+      <h2>Login by</h2>
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+      <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+      <a href="https://www.google.com" target="_blank"><i class="fab fa-google"></i>Google</a>
+    </div>
+  </div>
+  <div class="page" id="registerPage">
+    <div class="form-wrapper">
+      <form>
+        <div class="form-box">
+          <div class="log"><h1>register</h1></div>
+          <div class="place"><input class="check" type="text" placeholder="enter your username" /></div>
+          <div class="place"><input class="check" type="password" placeholder="new password" /></div>
+          <div class="place"><input class="check" type="password" placeholder="confirm password" /></div>
+          <div class="place"><button>register</button></div>
+          <div class="box">
+            <input id="remember2" type="checkbox" />
+            <label for="remember2">remember me</label>
+          </div>
+          <div style="text-align: center; margin-top: 20px;">
+            already have an account? <a id="showLogin">login</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="side-panel">
+      <h2>Hello!</h2>
+      <p style="text-align: center;">This is my <strong>Dragon Ball Z</strong> fanpage</p>
+    </div>
+  </div>
+  <script>
+    const loginPage = document.getElementById("loginPage");
+    const registerPage = document.getElementById("registerPage");
+    const showRegister = document.getElementById("showRegister");
+    const showLogin = document.getElementById("showLogin");
+
+    showRegister.addEventListener("click", () => {
+      loginPage.classList.remove("active");
+      registerPage.classList.add("active");
+    });
+
+    showLogin.addEventListener("click", () => {
+      registerPage.classList.remove("active");
+      loginPage.classList.add("active");
+    });
+  </script>
 </body>
 </html>
