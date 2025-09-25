@@ -4,11 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DBZ Fan Portal</title>
-  <style>   
-    .comment{
-      font-size: 50px;
-      align-self: flex-start;
-    }
+  <style> 
     .dragon{
       display : flex;
       justify-content: space-evenly;
@@ -74,49 +70,6 @@
     }
     .block1:hover , .block2:hover ,.block3:hover{
       transform:scale(1.1);
-    }
-    .text4{
-      font-size:34px;
-      font-family:fantasy;
-    }
-    .saiyan1{
-      background-color: #f85b1a;
-      height: 50px;
-            border:2px solid;
-            transition-timing-function: ease-in-out;
-            transition-duration: 0.2s;
-         transition-property: all;
-    }
-    .saiyan1:active, .saiyan2:active, .saiyan3:active, .saiyan4:active {
-      transform:scale(1.05);
-    }
-    .saiyan2{
-      background-color:#072083;
-            border:2px solid;
-      height: 50px;transition-timing-function: ease-in-out;
-            transition-duration: 0.2s;
-         transition-property: all;
-    }
-    .saiyan3{
-      background-color:green;
-            border:2px solid;
-      height: 50px;transition-timing-function: ease-in-out;
-            transition-duration: 0.2s;
-         transition-property: all;
-    }
-    .saiyan4{
-      background-color: rgb(222, 220, 220);
-            border:2px solid;
-      height: 50px;transition-timing-function: ease-in-out;
-            transition-duration: 0.2s;
-         transition-property: all;
-    }
-    #container{
-      text-align: center;
-      height:250px;
-      display: flex;
-      border: 2px solid;
-      flex-direction: column;
     }
     .jaan1{
       height: 500px;
@@ -260,13 +213,13 @@ background-size: cover;
       border:2px solid black;
     }
     .overlay-text {
-      color: aqua;
+      color: white;
       padding: 20px;
       font-size: 1em;
       font-family: Arial, sans-serif;
       line-height: 1.5;
       background-color: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(3px);
+      backdrop-filter: blur(15px);
       border-radius: 20px;
     }
     pre { margin: 0; }
@@ -413,11 +366,6 @@ content: 'Son Gokū (孫悟空), known simply as Goku, is the central protagonis
     .yash{
       display: flex;
     }
-#siddhu{
-background-color:aqua;
-box-shadow: 0px 0px 20px aqua ;
-#siddhu:hover{
-box-shadow:50px aqua;}
 @media (max-width: 480px) {
   #informationbar{
     display: flex;
@@ -508,6 +456,147 @@ box-shadow:50px aqua;}
 footer { box-sizing: border-box; width: 100%; overflow: hidden; }
 
 .select { overflow: hidden; }
+
+#comments-ideas-section { 
+  font-family: fantasy, Arial, sans-serif;
+  color: #fff;
+  padding: 18px;
+  box-sizing: border-box;
+  margin: 30px auto;
+  max-width: 97.25%;
+  border: 3px solid rgba(0,0,0,0.6);
+  border-radius: 14px;
+  background: linear-gradient(90deg,#f85b1a,#ffd47a);
+}
+#comments-ideas-section, 
+#comments-ideas-section * { 
+  text-transform: none !important; 
+}
+#comments-ideas-section h2 { 
+  font-size: 34px;
+  margin: 6px 0 14px 0;
+  color: black;
+  text-align: center;
+}
+.ci-row{ 
+  display: flex;
+  gap: 18px;
+}
+.ci-panel{ 
+  flex: 1;
+  min-width: 300px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 12px;
+  padding: 14px;
+  border: 2px solid rgba(255,255,255,0.06);
+}
+.ci-panel h3{ 
+  margin: 6px 0 12px 0;
+  color: #ffb07a;
+}
+.ci-form input[type="text"], 
+.ci-form textarea{ 
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(238, 236, 236,0.6);
+  color: #fff;
+  box-sizing: border-box;
+}
+.ci-form textarea{ 
+  min-height: 90px;
+  resize: vertical;
+  margin-top: 8px;
+}
+.ci-actions{ 
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-top:10px;
+}
+.btn{ 
+  cursor: pointer;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+}
+.btn.primary{ 
+  background: linear-gradient(90deg,#f85b1a,#ffd47a);
+  color:#000;
+}
+.btn.ghost{ 
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #fff;
+}
+.ci-list{ 
+  margin-top:14px;
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  max-height: 360px;
+  overflow:auto;
+  padding-right:6px;
+}
+.entry{ 
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:10px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.04);
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+}
+.entry .avatar{ 
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  background: linear-gradient(180deg,#ffd47a,#f85b1a);
+  color:#000;
+}
+.entry .body{ 
+  flex:1;
+}
+.entry .meta{ 
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+}
+.entry .meta .who{ 
+  font-weight:700;
+}
+.entry .meta .when{ 
+  font-size:12px;
+  color:#ddd;
+}
+.entry .text{ 
+  margin-top:6px;
+  white-space:pre-wrap;
+}
+.entry .controls{ 
+  margin-left:8px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.small-btn{ 
+  font-size:12px;
+  padding:6px 8px;
+  border-radius:8px;
+}
+@media (max-width: 780px){
+  .ci-row{ flex-direction: column; }
+  #comments-ideas-section{ padding: 12px; }
+}
+
   </style>
 </head>
 <body>
@@ -550,9 +639,8 @@ The Dragon Ball manga has been sold in over 40 countries and the anime has been 
       <div class="jaan1"> <div class="jaanback"><a href="infoboard1.html"><img src="goku.jpg" alt="goku"height="500px" width="100%"></a></div></div>
       <div class="jaan2"> <div class="jaanback"><a href="infoboard.html"><img src="Ultra Ego Wallpaper.jpg" alt="goku"height="500px" width="100%"></a></div></div>
       <div class="jaan4"> <div class="jaanback"><a href="infoboard3.html"> <img src="Gohan Bestia.jpg" alt="goku"height="500px" width="100%"></a></div></div>
-      <div class="jaan3"> <div class="jaanback"><a href="infoboard2.html"> <img src="broly.jpg" alt="goku"height="500px" width="100%"></a></div></div>     </div>   <a href="infoboard4.html">   <button id="siddhu">enter for more character info</button></a>
+      <div class="jaan3"> <div class="jaanback"><a href="infoboard2.html"> <img src="broly.jpg" alt="goku"height="500px" width="100%"></a></div></div>     </div>   <a href="infoboard4.html">   <button>enter for more character info</button></a>
         <div style="font-size: 50px;" style="text-align: center;">news area</div>
-       <!-- <form action="/action.php"> -->
      <div class="look">
    <div class="yash"> <div class="block1">you might interested<hr></div>
     <div class="block2">trending topic<hr></div>
@@ -615,24 +703,53 @@ The Dragon Ball manga has been sold in over 40 countries and the anime has been 
     </div>
   </div>
 </div></div>
-    <div id="container">
-    <pre class="text4">WHat is your favourite in series</pre>
-    <div id="choice">
-   <div class="saiyan1"> <label for="100">
-      <div class="try"><input type="radio" value="goku" name="character" id="100" >dragon ball</div>
-    </label></div>
-   <div class="saiyan2"> <label for="101">
-     <div class="try"> <input type="radio" value="vegeta" name="character" id="101">dragon ball z</div>
-    </label></div>
-   <div class="saiyan3"> <label for="102">
-     <div class="try"> <input type="radio" value="BOTH" name="character" id="102">dragon ball super</div>
-    </label></div>
-    <div class="saiyan4">
-     <label for="103"><div class="try"> <input type="radio"value="gohan" name="character" id="103">dragon ball gt </div> </label>
+
+<section id="fav-series">
+  <h2>🔥 What’s Your Favourite Dragon Ball Series?</h2>
+  <form>
+    <div class="series-grid">
+      <div class="series-card">
+        <input type="radio" name="fav-series" id="db" value="Dragon Ball">
+        <label for="db">
+          <img src="Dragon-Ball.webp" alt="Dragon Ball">
+          <div>Dragon Ball</div>
+        </label>
+      </div>
+
+      <div class="series-card">
+        <input type="radio" name="fav-series" id="dbz" value="Dragon Ball Z">
+        <label for="dbz">
+          <img src="Dragon_Ball_Super_Poster.webp" alt="Dragon Ball Z">
+          <div>Dragon Ball Z</div>
+        </label>
+      </div>
+
+      <div class="series-card">
+        <input type="radio" name="fav-series" id="dbgt" value="Dragon Ball GT">
+        <label for="dbgt">
+          <img src="4star.jpg" alt="Dragon Ball GT">
+          <div>Dragon Ball GT</div>
+        </label>
+      </div>
+
+      <div class="series-card">
+        <input type="radio" name="fav-series" id="dbs" value="Dragon Ball Super">
+        <label for="dbs">
+          <img src="Dragon_Ball_Super_Poster.webp" alt="Dragon Ball Super">
+          <div>Dragon Ball Super</div>
+        </label>
+      </div>
+
+      <div class="series-card">
+        <input type="radio" name="fav-series" id="dbd" value="Dragon Ball Daima">
+        <label for="dbd">
+          <img src="Dragon-Ball-Daima.webp" alt="Dragon Ball Daima">
+          <div>Dragon Ball Daima</div>
+        </label>
+      </div>
     </div>
-    <div>
-    <input type="submit" value="submit">
-    </div></form>
+  </form>
+</section>
     <div id="lower">
     <div id="upper">
              <div class="interest" style="font-size: 50px;"> <h2 >Choose Your Interest</h2></div>
@@ -672,23 +789,45 @@ The Dragon Ball manga has been sold in over 40 countries and the anime has been 
     </div>
   </div> 
   </div>
+<!-- 
   <div id="clipper">
   <div id="clip">
-<marquee><div id="youtuber">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/R9PSipmDAnA?si=OEBYVmpBeCFenfXJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </marquee>
+       <div id="youtuber">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/R9PSipmDAnA?si=OEBYVmpBeCFenfXJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>-->
+<section id="comments-ideas-section" aria-label="Comments and ideas">
+  <h2>DBZ Fanboard — Comments & Ideas</h2>
+  <div class="ci-row">
+    <div class="ci-panel" id="comment-panel" aria-labelledby="comment-heading">
+      <h3 id="comment-heading">Fan Comments</h3>
+      <form id="comment-form" class="ci-form">
+        <input  id="comment-name" type="text" placeholder="Your name or nickname" maxlength="40" />
+        <textarea id="comment-text" placeholder="Share a comment about the site, a character, or your favorite fight!" maxlength="800"></textarea>
+        <div class="ci-actions">
+          <button class="btn primary" type="submit">Post Comment</button>
+          <button class="btn ghost" type="button" id="export-comments">Export</button>
+          <button class="btn ghost" type="button" id="clear-comments">Clear</button>
+        </div>
+      </form>
+
+      <div class="ci-list" id="comment-list" aria-live="polite"></div>
+    </div>
+
+    <div class="ci-panel" id="idea-panel" aria-labelledby="idea-heading">
+      <h3 id="idea-heading">Ideas & Fan Projects</h3>
+      <form id="idea-form" class="ci-form">
+        <input id="idea-name" type="text" placeholder="Your name or nickname" maxlength="40" />
+        <textarea id="idea-text" placeholder="Suggest features, fan art ideas, game mods or events..." maxlength="1000"></textarea>
+        <div class="ci-actions">
+          <button class="btn primary" type="submit">Share Idea</button>
+          <button class="btn ghost" type="button" id="export-ideas">Export</button>
+          <button class="btn ghost" type="button" id="clear-ideas">Clear</button>
+        </div>
+      </form>
+      <div class="ci-list" id="idea-list" aria-live="polite"></div>
+    </div>
   </div>
-  <div class="choice">
-    <select name="your choice of info" id="history">
-        <option value="goku">goku history</option>
-        <option value="vegeta">vegeta history</option>
-        <option value="gohan">gohan history</option>
-    </select>
-  </div></div>
-            <div class="dragon">
-<input type="text" placeholder="type your comment here"></input>
-           <div class="comment">comment section</div>
-    <input placeholder="r18+ comment here"></textarea>
-    <br></div> -->
+</section>
     <footer>
       <div class="footer-sections">
         <div class="contact">
@@ -701,7 +840,7 @@ The Dragon Ball manga has been sold in over 40 countries and the anime has been 
           <h3>Team Members</h3>
           <div class="mem"><a>siddhant rajliwal</a></div>
           <div class="mem"><a>yash rajliwal</a></div>
-          <div class="mem"><a>siddhant rajliwal</a></div>
+          <div class="mem"><a>vansh bajaj</a></div>
         </div>
         <div class="join">
           <h3>Follow Us On</h3>
@@ -714,7 +853,7 @@ The Dragon Ball manga has been sold in over 40 countries and the anime has been 
         <p>made by siddhant rajliwal and team members<br>
         @2024-2025,dbz.com,inc.or its affiliates</p>
       </div>
-       <div id="like">     <form>
+       <div id="like" style="text-align: center;">     <form>
   <label>Rate our site:</label><br>
   <input type="radio" name="rate"> ⭐
   <input type="radio" name="rate"> ⭐⭐
@@ -726,5 +865,71 @@ The Dragon Ball manga has been sold in over 40 countries and the anime has been 
   </div>
 </div>
 </body> 
-<script></script>
+<script>
+  let marks=[100,200,300,400,500];
+  marks.push(5000);
+  marks.splice(2,1,600)
+  for(let idx=0;idx<marks.length;idx++){
+  console.log(marks[idx]);
+  console.log(marks[idx]-marks[idx]/10);
+  }
+  console.log(marks);
+</script>
 </html>
+<style>
+  #fav-series {
+    font-family: fantasy, Arial, sans-serif;
+    padding: 20px;
+    height: 400px;
+    margin: 30px auto;
+    max-width: 96%;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(7,32,131,0.15), rgba(248,91,26,0.15));
+    border: 3px solid rgba(255,255,255,0.1);
+    color: #fff;
+  }
+  #fav-series, #fav-series * { text-transform: none !important; }
+
+  #fav-series h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 18px;
+    color: #ffd47a;
+  }
+
+  .series-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    gap: 16px;
+  }
+  .series-card input {
+    display: none;
+  }
+  .series-card label {
+    display: block;
+    background: rgba(0,0,0,0.55);
+    border: 2px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .2s, border .2s;
+  }
+  .series-card label:hover {
+    transform: scale(1.05);
+    border-color: #ffd47a;
+  }
+
+  .series-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  .series-card input:checked + label {
+    border-color: #f85b1a;
+    background: linear-gradient(160deg,#ffd47a20,#f85b1a30);
+  }
+</style>
