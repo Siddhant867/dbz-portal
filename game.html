@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER SCISSOR GAME</title>
+    <style>
+        body {
+            background-color: #1A1A1A; 
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            height: 100px;
+            background-color: #FF9800; 
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            letter-spacing: 2px;
+        }
+        #maingame {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            gap: 10rem;
+            height: 250px;
+        }
+        #scoreboard {
+            justify-content: center;
+            display: flex;
+            gap: 5rem;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+        .icon:hover {
+            border: 3px solid #FFD700; 
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: 0.3s ease;
+            border-radius: 10px;
+        }
+        .msg {
+            font-size: 22px;
+            background-color: #F44336;
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            color: white;
+        }
+        * {
+            text-align: center;
+        }
+    </style>
+</head>
+<body><div id="full"> <h1>⚡ ROCK PAPER SCISSOR GAME ⚡</h1>
+    <div id="maingame">
+        <div class="icon" id="rock">
+            <img height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDvPwvlQA6kxR3a_naoY4puLzx22RZK7mXeg&s">
+        </div>
+        <div class="icon" id="paper">
+            <img src="https://www.vhv.rs/dpng/d/490-4906131_rock-paper-scissors-clipart-rock-paper-scissors-png.png" height="200px">
+        </div>
+        <div class="icon" id="scissor">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPJt40RU4NdEHBc1_rmnFGt6bKDgMGReOGJA&s" height="200px">
+        </div>
+    </div>
+    <div id="scoreboard">
+        <div id="score">
+            <p id="userscore">0</p>
+            <p>🟠 You</p>
+        </div>
+        <div id="score">
+            <p id="comscore">0</p>
+            <p>🔵 Com</p>
+        </div>
+    </div>
+    <div class="MSGCONTAINER">
+        <p class="msg">🌀⚔️ Play your move</p>
+    </div></div>
+</body>
+
+    <script>
+        com=document.querySelector("#comscore")
+        you=document.querySelector("#userscore")
+        msg=document.querySelector(".msg")
+        icon=document.querySelectorAll(".icon")
+        round=0
+        chance=()=>{round=prompt("🌀⚔️ How many rounds do you want to play?")}
+        chance()
+        i=0;j=0;
+        end=(res)=>{
+            if(res==true){
+                console.log("userwin")
+                you.innerText=`${i=i+1}`
+                msg.innerText=`🔥 Your ${userchoice} beats computer ${computer}`
+            }
+            else{ 
+                console.log("compwin")
+                com.innerText=`${j=j+1}`
+                msg.innerText=`💀 Your ${userchoice} is defeated by computer ${computer}`
+            }
+            if (j == round) {
+                document.querySelector("#full").style.opacity = "0.5";
+                const p = document.createElement("p");
+                p.innerText = "💀🥶 You Lose";
+                b=document.createElement("button")
+                const overlay = document.createElement("div");
+                overlay.style.position = "fixed";
+                overlay.style.top = "50%";
+                overlay.style.left = "50%";
+                overlay.style.transform = "translate(-50%, -50%)";
+                                overlay.style.background="linear-gradient(90deg,orange,yellow)"
+                overlay.style.zIndex = "9999";
+                overlay.style.backgroundColor = "#00BCD4"; 
+                overlay.style.padding = "100px";
+                overlay.style.borderRadius = "10px";
+                overlay.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+                overlay.style.textAlign = "center";
+                b.innerText="🔁 Play Again"
+                b.style.fontSize="30px"
+                p.style.fontSize="30px"
+                overlay.appendChild(b)
+                overlay.appendChild(p)
+                document.body.appendChild(overlay);
+                icon.forEach(element => {
+                    element.style.pointerEvents="none";
+                });
+            }
+            if(i == round){
+                document.querySelector("#full").style.opacity = "0.2";
+                const p = document.createElement("p");
+                p.innerText = "🎉🔥 You Win!";
+                b=document.createElement("button")
+                b.innerText="🔁 Play Again"
+                const overlay = document.createElement("div");
+                overlay.style.position = "fixed";
+                overlay.style.top = "50%";
+                overlay.style.left = "50%";
+                overlay.style.transform = "translate(-50%, -50%)";
+                overlay.style.zIndex = "9999";
+                overlay.style.background="linear-gradient(90deg,orange,yellow)"
+                overlay.style.padding = "100px";
+                overlay.style.borderRadius = "10px";
+                overlay.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+                overlay.style.textAlign = "center";
+                b.style.fontSize="30px"
+                p.style.fontSize="30px"
+                overlay.appendChild(b)
+                overlay.appendChild(p)
+                document.body.appendChild(overlay);
+                icon.forEach(element => {
+                    element.style.pointerEvents="none";
+                });
+            }
+            b.addEventListener("click",()=>{
+                location.reload();
+            })
+        }
+        helo=()=>{
+            arr=["rock","paper","scissor"];
+            const game=Math.floor(Math.random()*3);
+            console.log(game)
+            return arr[game];
+        }
+        user=(user)=>{
+            if(user===computer){
+                console.log("nobody wins the game ties")
+                msg.innerText="⚔️ It's a tie!"
+            }
+            else if(user==="rock"){
+                if(computer==="paper"){
+                    result=false;
+                }else
+                    result=true;
+            }
+            else if(user==="paper"){
+                if(computer==="rock"){
+                    result=true;
+                }else
+                    result=false;
+            }
+            else if(user==="scissor"){
+                if(computer==="paper"){
+                    result=true;
+                }else
+                    result=false;
+            }
+            if(user!==computer)
+                end(result);
+        }
+        icon.forEach(element => {
+            element.addEventListener("click",()=>{
+                userchoice=element.getAttribute("id")
+                console.log(element.getAttribute("id"),"key is pressed")
+                computer= helo();
+                user(userchoice)
+            })
+        });
+    </script>
+</html>

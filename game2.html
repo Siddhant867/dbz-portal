@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DBZ Tic Tac Toe</title>
+<style>
+:root{
+  --bg1:#0b1220;
+  --bg2:#0f1724;
+  --accent:#ff9800;
+  --token-O-bg:linear-gradient(180deg,#ffb04d,#ff6f00);
+  --token-X-bg:linear-gradient(180deg,#7ad0ff,#2ea8ff);
+}
+
+body{
+  height:100vh;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-family:"Segoe UI",sans-serif;
+  background:linear-gradient(180deg,var(--bg1),var(--bg2));
+  color:white;
+}
+
+#logo{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  background:linear-gradient(90deg,#ff6f00,#ffd600);
+  color:#1a0b00;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size:28px;
+  font-family: fantasy;
+  height: 80px;
+  font-size:50px;
+  padding:10px 20px;
+  border-radius:10px;
+  margin-bottom:30px;
+  box-shadow:0 0 25px rgba(255,160,0,0.2);
+}
+
+.dbz-orb{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 25%,#fff8c6,#ffb100 30%,#ff6f00 60%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  color:#7a2b00;
+  font-size:20px;
+  box-shadow:0 0 15px rgba(255,140,0,0.3);
+}
+
+#frame{
+  display:grid;
+  grid-template-columns:repeat(3,110px);
+  gap:12px;
+  background:rgba(255,255,255,0.03);
+  padding:16px;
+  border-radius:14px;
+  box-shadow:0 0 30px rgba(0,0,0,0.6);
+}
+
+.tokens{
+  width:110px;
+  height:110px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:10px;
+  font-size:48px;
+  color:white;
+  cursor:pointer;
+  transition:transform .15s,box-shadow .15s;
+}
+.tokens:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 18px rgba(255,160,0,0.15);
+}
+.tokens:disabled{
+  cursor:default;
+  transform:none;
+  opacity:1;
+}
+.tokens[o-taken]{background:var(--token-O-bg);color:#3b1700;font-weight:800;}
+.tokens[x-taken]{background:var(--token-X-bg);color:#002235;font-weight:800;}
+
+#overflow{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  font-size:32px;
+  visibility:hidden;
+  z-index:10;
+}
+
+.reset{
+  background:linear-gradient(90deg,#ff6f00,#ffd600);
+  color:#1a0b00;
+  border:none;
+  padding:10px 18px;
+  border-radius:8px;
+  font-size:18px;
+  font-weight:700;
+  cursor:pointer;
+}
+.reset:active{transform:translateY(2px);}
+</style>
+</head>
+<body>
+  <div id="logo">
+    <div class="dbz-orb">★</div>
+    O TIC TAC TOE X
+  </div>
+
+  <div id="frame">
+    <button class="tokens" value="1"></button>
+    <button class="tokens" value="2"></button>
+    <button class="tokens" value="3"></button>
+    <button class="tokens" value="4"></button>
+    <button class="tokens" value="5"></button>
+    <button class="tokens" value="6"></button>
+    <button class="tokens" value="7"></button>
+    <button class="tokens" value="8"></button>
+    <button class="tokens" value="9"></button>
+  </div>
+
+  <div id="overflow">
+    <div id="result-text"></div>
+    <button class="reset">🔁 RESET</button>
+  </div>
+
+<script>
+reset=document.querySelector(".reset")
+overflow=document.querySelector("#overflow")
+count=0
+button=document.querySelectorAll(".tokens")
+
+button.forEach(element => {
+  element.addEventListener("click",()=>{
+    if(count<=10){
+      count=count+2;
+      element.innerText="O"
+      cos=complayer();
+      if (
+        (button[0].innerText==="O"&&button[1].innerText==="O"&&button[2].innerText==="O")||
+        (button[3].innerText==="O"&&button[4].innerText==="O"&&button[5].innerText==="O")||
+        (button[6].innerText==="O"&&button[7].innerText==="O"&&button[8].innerText==="O")||
+        (button[0].innerText==="O"&&button[3].innerText==="O"&&button[6].innerText==="O")||
+        (button[1].innerText==="O"&&button[4].innerText==="O"&&button[7].innerText==="O")||
+        (button[2].innerText==="O"&&button[5].innerText==="O"&&button[8].innerText==="O")||
+        (button[0].innerText==="O"&&button[4].innerText==="O"&&button[8].innerText==="O")||
+        (button[2].innerText==="O"&&button[4].innerText==="O"&&button[6].innerText==="O")
+      ) return kaam(true);
+
+      if(count<=8){
+        while(button[cos].innerText!==""){
+          cos=complayer();
+        }
+        button[cos].innerText='X'
+      }else{
+        return kaam("");
+      }
+      button[cos].style.pointerEvents="none"
+      element.style.pointerEvents="none"
+
+      if (
+        (button[0].innerText==="X"&&button[1].innerText==="X"&&button[2].innerText==="X")||
+        (button[3].innerText==="X"&&button[4].innerText==="X"&&button[5].innerText==="X")||
+        (button[6].innerText==="X"&&button[7].innerText==="X"&&button[8].innerText==="X")||
+        (button[0].innerText==="X"&&button[3].innerText==="X"&&button[6].innerText==="X")||
+        (button[1].innerText==="X"&&button[4].innerText==="X"&&button[7].innerText==="X")||
+        (button[2].innerText==="X"&&button[5].innerText==="X"&&button[8].innerText==="X")||
+        (button[0].innerText==="X"&&button[4].innerText==="X"&&button[8].innerText==="X")||
+        (button[2].innerText==="X"&&button[4].innerText==="X"&&button[6].innerText==="X")
+      ) return kaam(false);
+    }
+  })
+});
+
+complayer=()=>Math.floor(Math.random()*9)
+
+kaam=(key)=>{
+  for(it of button){it.style.pointerEvents="none"}
+  overflow.style.visibility="visible"
+  resultText=document.querySelector("#result-text")
+  if(key===true){
+    resultText.textContent="🎉 You Win! Saiyan Power Unleashed!"
+  }else if(key===false){
+    resultText.textContent="😞 You Lose! Defeated by Ki Blast!"
+  }else{
+    resultText.textContent="😐 It's a Tie! Equal Power Levels!"
+  }
+}
+
+reset.addEventListener("click",()=>location.reload())
+</script>
+</body>
+</html>
