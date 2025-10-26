@@ -628,6 +628,9 @@
   .content{
     display: none;
   }
+  body{
+    margin: 0;
+  }
 </style>
 </head>
 <body>
@@ -635,9 +638,9 @@
     <div class="res">    
      <a   id="logo">dbz</a></div>
      <div class="re">    <a class="navbar" href="loginpage.html">home</a>
-    <a class="navbar" href="#">explore</a>
-    <a class="navbar" href="dbz.html">games</a>
-    <a class="navbar" href="#">contact</a>  <button style="height: 20px;    background: linear-gradient(90deg,#f85b1a,#ffd47a);" id="darkmode">modes</button>
+    <a class="navbar" href="gamepage.html">episode</a>
+    <a class="navbar" href="gamepage.html">games</a>
+    <a class="navbar" onclick="scrollToBottom()"href="#">contact</a>  <button style="height: 20px;    background: linear-gradient(90deg,#f85b1a,#ffd47a);" id="darkmode">modes</button>
           <input placeholder=""></input>
     <button>search</button>  
 </div>
@@ -983,7 +986,11 @@ select=document.querySelectorAll(".select")
       }
     });
 })
-
+  function scrollToBottom() {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  }
 </script>
 </html>
-
