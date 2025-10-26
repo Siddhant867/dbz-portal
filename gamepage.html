@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: white;
+      background-color: #f0f4f8;
+    }
+    #front {
+      display: flex;
+      gap: 80px;
+    }
+    #navbar, #navbar1 {
+      background: linear-gradient(90deg, #6234cf, #821964);
+      display: flex;
+      width: 100vw;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #logo {
+      font-size: 40px;
+    }
+    #hoho {
+      font-size: 20px;
+      display: flex;
+      gap: 40px;
+      margin-right: 20px;
+    }
+    #page {
+      height: 502px;
+      width: 1000px;
+      margin-top: 40px;
+      margin-left: 20px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    #HO {
+      background: linear-gradient(90deg, #43cea2, #185a9d);
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      font-size: 30px;
+    }
+    #HOh {
+      background: linear-gradient(90deg, #2c3e50, #4ca1af);
+      height: 80px;
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      gap: 30px;
+    }
+    #HOh p {
+      font-size: 40px;
+    }
+    #enter {
+      background-color: #2c3e50;
+      width: 35vw;
+      height: 5vh;
+      border-radius: 20px;
+      font-size: 25px;
+    }
+    #b {
+      height: 5vh;
+      font-size: 25px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      width: 8vw;
+      margin-right: 20px;
+      font-family: system-ui, sans-serif;
+      text-align: center;
+      cursor: pointer;
+    }
+    #task {
+      height: 40vh;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #cfd9df, #e2ebf0);
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      flex-direction: column;
+      overflow-y: auto;
+      gap: 10px;
+    }
+    #dashboard {
+      height: 55vh;
+      border: 2px solid rgba(0, 0, 0, 0.158);
+      border-radius: 10px;
+      margin-top: 80px;
+      width: 18vw;
+      color: black;
+      text-align: center;
+    }
+    .completed-icon {
+      color: #4CAF50;
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    .pending-icon {
+      color: #FF9800;
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    .important-icon {
+      color: #FFD700;
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    .games-wrapper {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+    }
+    .gamecontainer {
+      height: 400px;
+      width: 300px;
+      border: 2px solid #333;
+      border-radius: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 20px;
+    }
+    .gamecontainer:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    #name p {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin: 20px 0 10px;
+      color: #333;
+      width: 100%;
+    }
+    .gamecontainer img {
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar">
+    <div id="logo"><p>⚔️<i> Episode Tracker</i></p></div>
+    <div id="hoho">
+      <a>profile</a>
+      <a>dashboard</a>
+      <button id="darkmode" style="background: none; border: none; cursor: pointer;">
+        <svg id="moonicon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 0111.21 3a7 7 0 000 14A9 9 0 0021 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="front">
+    <div id="page">
+      <div id="HO"><p style="margin-left: 10px;">Episode Manager</p></div>
+      <div id="HOh">
+        <button id="b">+Add</button>
+        <input type="text" id="enter">
+        <p>Add Episode</p>
+      </div>
+      <div id="task"><p style="font-size: 20px;">No episode found. Add a new episode to get started!</p></div>
+    </div>
+
+    <div id="dashboard">
+      <p style="font-size:4vh; text-align: center;">Your Dashboard</p>
+      <p style="font-size: 25px;"><i class="fas fa-check-circle completed-icon"></i>Completed</p>
+      <p id="complete">0</p>
+      <p style="font-size: 25px;"><i class="fas fa-hourglass-half pending-icon"></i>Pending</p>
+      <p id="pending">0</p>
+      <p style="font-size: 25px;"><i class="fas fa-star important-icon"></i>Important</p>
+      <p id="imp">0</p>
+    </div>
+  </div>
+
+  <div id="navbar1"><p style="font-size: 40px;">⚔️<i> Free Games</i></p></div>
+  <div class="games-wrapper">
+    <div class="gamecontainer">
+      <div id="name"><p>🪨 ROCK 📄 PAPER ✂️ SCISSOR <hr></p></div>
+      <div>
+        <a href="game.html">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0eW19-0rY2OvaW5Kq6whUWptTkNVBsnMZ2Q&s" height="300px" width="298px" />
+        </a>
+      </div>
+    </div>
+
+    <div class="gamecontainer">
+      <div id="name"><p>TIC TAC TOE GAME</p></div>
+      <div>
+        <a href="game2.html">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOYMp4wawnVXwQmt-5DR15SaFcVP4ut1ma2A&s" height="300px" width="298px" />
+        </a>
+      </div>
+    </div>
+  </div>
+  </body>
+<script>
+ const complete = document.querySelector("#complete");
+const pending = document.querySelector("#pending");
+const task = document.querySelector("#task");
+const enter = document.querySelector("#enter");
+const button = document.querySelector("#b");
+const imp = document.querySelector("#imp");
+
+button.addEventListener("click", () => {
+  if (task.innerText === "No episode found. Add a new episode to get started!") {
+    task.innerText = "";
+  }
+
+  const wrapper = document.createElement("div");
+  wrapper.style.display = "flex";
+  wrapper.style.width = "100%";
+  wrapper.style.alignItems = "center";
+  wrapper.style.gap = "5px";
+
+  const check = document.createElement("input");
+  check.type = "checkbox";
+
+  const star = document.createElement("button");
+  star.innerHTML = '<i class="fas fa-star important-icon1"></i>';
+  const starIcon = star.querySelector(".important-icon1");
+  starIcon.style.color = "white";
+
+  star.addEventListener("click", () => {
+    if (starIcon.style.color === "white") {
+      starIcon.style.color = "red";
+      imp.innerText = Number(imp.innerText) + 1;
+    } else {
+      starIcon.style.color = "white";
+      imp.innerText = Number(imp.innerText) - 1;
+    }
+  });
+
+  const add = document.createElement("textarea");
+  add.readOnly = true;
+  add.style.width = "99%";
+  add.style.fontSize = "20px";
+  add.style.border = "2px solid rgba(0, 0, 0, 0.158)";
+  add.value = enter.value;
+
+  pending.innerText = Number(pending.innerText) + 1;
+
+  wrapper.appendChild(star);
+  wrapper.appendChild(add);
+  wrapper.appendChild(check);
+  task.prepend(wrapper);
+
+  check.addEventListener("change", () => {
+    if (check.checked) {
+      complete.innerText = Number(complete.innerText) + 1;
+      pending.innerText = Number(pending.innerText) - 1;
+    } else {
+      complete.innerText = Number(complete.innerText) - 1;
+      pending.innerText = Number(pending.innerText) + 1;
+    }
+  });
+});
+
+const hi = document.querySelector("#darkmode");
+const body = document.querySelector("body");
+const moon = document.querySelector("#moonicon");
+let mode = "light";
+
+hi.addEventListener("click", () => {
+  if (mode === "light") {
+    body.style.backgroundColor = "black";
+    body.style.color = "white";
+      document.querySelector("#task").style.background = "black";
+            document.querySelector("#task").style.border = "2px solid white";
+        document.querySelector("#dashboard").style.color = "white";
+                document.querySelector("#dashboard").style.border = "2px solid white";
+    moon.setAttribute("fill", "#ffffff");
+    mode = "dark";
+  } else {
+    body.style.backgroundColor = "white";
+  document.querySelector("#task").style.background = "linear-gradient(90deg, #cfd9df, #e2ebf0)";
+                    document.querySelector("#dashboard").style.color = "black";
+                document.querySelector("#dashboard").style.border = "2px solid black";
+    body.style.color = "black";
+    moon.setAttribute("fill", "#000000");
+    mode = "light";
+  }
+});
+</script>
+</html>
